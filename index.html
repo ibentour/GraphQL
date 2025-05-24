@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GraphQL</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="graph.js"></script>
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div class="user-info">
+                <span id="show_Name">FirstName LastName</span>
+            </div>
+            <button id="logout_btn" class="logout-btn" title="Logout">Logout</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Audit Statistics</h2>
+            <div class="stats-grid">
+                <div>
+                    <span class="stat-label">Audit Ratio</span>
+                    <span id="show_audit_ratio" class="stat-value">0</span>
+                </div>
+                <div>
+                    <span class="stat-label">Total Audits</span>
+                    <span id="show_audit_total" class="stat-value">0</span>
+                </div>
+                <div>
+                    <span class="stat-label">Success Rate</span>
+                    <span id="show_audit_successRate" class="stat-value success">0 %</span>
+                </div>
+                <div>
+                    <span class="stat-label">Fail Rate</span>
+                    <span id="show_audit_failRate" class="stat-value fail">0 %</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Current Level</h2>
+            <div id="show_level" class="level-circle">0</div>
+        </section>
+
+        <section class="card">
+            <h2>Last Transactions</h2>
+            <table class="simple-table">
+                <tbody id="show_last_transactions"></tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Module Progress</h2>
+            <div id="show_module_time" class="module-time"></div>
+            <div id="show_total_xp" class="total-xp"></div>
+            <div id="module-graph">
+                <svg id="dispalyof_module" width="100%" height="600" viewBox="0 0 900 350"></svg>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Skills</h2>
+            <div id="show_graph_display" class="skills-graph">
+                <svg width="100%" height="200" viewBox="0 0 900 200"></svg>
+            </div>
+        </section>
+
+        <section class="card login-section" id="show_login">
+            <form id="login_form" method="POST" autocomplete="off">
+                <input type="text" name="username" placeholder="Username or Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

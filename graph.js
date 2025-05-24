@@ -53,7 +53,7 @@ export class Profile {
 
   async init() {
     try {
-      const response = await fetchData(GQL_GetProfile, {});
+      const response = await fetchData(GET_Profile, {});
 
       const profile = response?.profile;
       if (Array.isArray(profile)) {
@@ -144,7 +144,7 @@ export class Data {
   }
 }
 
-const GQL_GetProfile = `
+const GET_Profile = `
 {
   profile: user {
     firstName

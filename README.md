@@ -2,7 +2,6 @@
 
 A beautiful, interactive dashboard for visualizing programming skills and learning progress using GraphQL data from the Zone01 Oujda platform.
 
-![Dashboard Preview](https://via.placeholder.com/800x450.png?text=Zone01+Skills+Dashboard)
 
 ## Overview
 
